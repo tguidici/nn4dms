@@ -102,7 +102,7 @@ def cbeta_distance_matrix(pdb_fn, start=0, end=None):
     ppdb = PandasPdb().read_pdb(pdb_fn)
 
     # group by residue number
-    grouped = ppdb.df["ATOM"].groupby(["residue_number"])
+    grouped = ppdb.df["ATOM"].groupby("residue_number")
 
     # a list of coords for the cbeta or calpha of each residue
     coords = []
